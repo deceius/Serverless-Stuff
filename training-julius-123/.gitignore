@@ -1,5 +1,6 @@
 # Distribution / packaging
 .Python
+.history/*
 env/
 build/
 develop-eggs/
@@ -17,6 +18,5 @@ var/
 *.egg
 __pycache__
 node_modules
-.history
 # Serverless directories
 .serverless
