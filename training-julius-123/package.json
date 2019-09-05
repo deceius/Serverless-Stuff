@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "E-Science",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.1.0",
+    "serverless-offline": "^5.10.1",
+    "serverless-offline-python": "^3.21.3",
+    "serverless-plugin-warmup": "^4.0.0-rc.1",
+    "serverless-prune-plugin": "^1.4.0",
+    "serverless-python-requirements": "^4.3.0"
+  }
+}

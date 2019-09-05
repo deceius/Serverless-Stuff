@@ -1,0 +1,59 @@
+service: training-julius-123
+provider:
+  name: aws
+  runtime: python3.6
+  region: ap-southeast-1
+  memorySize: 128
+  timeout: 10
+  environment:
+    MYSQL_DB_HOST: training-db.clzf0somxlp9.ap-southeast-1.rds.amazonaws.com
+    MYSQL_DB_USER: db_admin
+    MYSQL_DB_PASSWORD: db_password
+    MYSQL_DB_SCHEMA: trainingDB
+  vpc:
+    securityGroupIds:
+      - sg-0cb9b3103e206611e
+    subnetIds:
+      - subnet-7b13173d
+custom:
+  pythonRequirements:
+    fileName: ./requirements.txt
+plugins:
+  - serverless-python-requirements
+  - serverless-offline-python
+
+functions:
+  getAll:
+    handler: get.getAll
+    events:
+      - http:
+          path: get/getAll
+          method: get
+          cors: true
+          # authorizer:
+          #   type: COGNITO_USER_POOLS
+          #   authorizerId: nu1eh5
+  getOne:
+    handler: get.getOne
+    events:
+      - http:
+          path: get/getOne
+          method: get
+          cors: true
+          # authorizer:
+          #   type: COGNITO_USER_POOLS
+          #   authorizerId: nu1eh5
+  insert:
+    handler: insert.insertOne
+    events:
+      - http:
+          path: insert/insertOne
+          method: post
+          cors: true
+  update:
+    handler: update.updateOne
+    events:
+      - http:
+          path: update/updateOne
+          method: put
+          cors: true
