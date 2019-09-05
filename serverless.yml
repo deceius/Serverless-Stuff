@@ -24,7 +24,7 @@ plugins:
 
 functions:
   getAll:
-    handler: get.getAll
+    handler: scripts/get.getAll
     events:
       - http:
           path: get/getAll
@@ -34,7 +34,7 @@ functions:
           #   type: COGNITO_USER_POOLS
           #   authorizerId: nu1eh5
   getOne:
-    handler: get.getOne
+    handler: scripts/get.getOne
     events:
       - http:
           path: get/getOne
@@ -44,14 +44,14 @@ functions:
           #   type: COGNITO_USER_POOLS
           #   authorizerId: nu1eh5
   insert:
-    handler: insert.insertOne
+    handler: scripts/insert.insertOne
     events:
       - http:
           path: insert/insertOne
           method: post
           cors: true
   update:
-    handler: update.updateOne
+    handler: scripts/update.updateOne
     events:
       - http:
           path: update/updateOne
