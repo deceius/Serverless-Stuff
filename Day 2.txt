@@ -1,0 +1,19 @@
+Unit Testing vs Integration Testing
+
+Unit Testing
+    - Should be OOP
+
+STUPID CODE
+S - Singleton
+T - Tight Coupling
+U - Untestable
+P - Premature Optimization
+I - Indescriptive Naming
+D - Duplication
+
+SOLID
+S - Single Responsibility Principle
+O - Open-Closed Principle
+L - Liskov Substitution Principle
+I - Interface Segregation Priniciple
+D - Dependency Inversion / Injection Principle
